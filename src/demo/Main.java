@@ -39,7 +39,7 @@ public class Main {
 		// モンスターグループのリストを空で生成
 		List<Monster> monsters = new ArrayList<>();
 		
-        // スライム、オーク、ドラゴンをモンスターグループのリストに追加
+		// スライム、オーク、ドラゴンをモンスターグループのリストに追加
 		monsters.add(slime);
 		monsters.add(oak);
 		monsters.add(dragon);
@@ -74,9 +74,8 @@ public class Main {
 			}
 			// モンスターグループに誰もいなくなれば、人間グループの勝利
 			if(monsters.isEmpty()) {
-				System.out.println(
-						"\n★★ ==== 決着がついた！！ ==== ★★\n"+ "\n #### 人間達は勝利した！！ ####\n");
-						break;
+				System.out.println("\n★★ ==== 決着がついた！！ ==== ★★\n"+ "\n #### 人間達は勝利した！！ ####\n");
+				break;
 			}
 			
 			System.out.println("\n[モンスターのターン！]\n");
@@ -98,9 +97,8 @@ public class Main {
 			
 			// 人間グループに誰もいなくなれば、人間グループの敗北
 			if(humans.isEmpty()) {
-				System.out.println(
-						"\n★★ ==== 決着がついた！！ ==== ★★\n"+ "\n #### 人間達は敗北してしまった！！ ####\n");
-						break;
+				System.out.println("\n★★ ==== 決着がついた！！ ==== ★★\n"+ "\n #### 人間達は敗北してしまった！！ ####\n");
+				break;
 			}
 			
 			// 現在の各グループの状態を一覧表示
