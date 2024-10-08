@@ -58,18 +58,18 @@ public class Main {
 			System.out.println("\n[人間のターン！]\n");
 
 			// 人間グループから1人選択
-			Human H1 = choiceHuman(humans);
+			Human human = choiceHuman(humans);
 			
 			// モンスターグループから1人選択
-			Monster M1 =choiceMonster(monsters);
+			Monster monster =choiceMonster(monsters);
 			
 			// 選ばれた人間が、選ばれたモンスターを攻撃
-			H1.attack(M1);
+			human.attack(monster);
 			
 			// モンスターのHPが0以下になれば、モンスターは倒れ、そのモンスターをモンスターグループから削除
-			if(M1.getHp()<= 0) {
-				System.out.println("\n★ 「"+ M1.getName() +"」は倒れた。\n");
-				monsters.remove(monsters.indexOf(M1));
+			if(monster.getHp()<= 0) {
+				System.out.println("\n★ 「"+ monster.getName() +"」は倒れた。\n");
+				monsters.remove(monsters.indexOf(monster));
 				
 			}
 			// モンスターグループに誰もいなくなれば、人間グループの勝利
@@ -81,18 +81,18 @@ public class Main {
 			System.out.println("\n[モンスターのターン！]\n");
 			
 			// 人間グループから1人選択
-			Human H2 = choiceHuman(humans);
+			human = choiceHuman(humans);
 			
 			// モンスターグループから1人選択
-			Monster M2 = choiceMonster(monsters);
+			monster = choiceMonster(monsters);
 			
 			// 選ばれたモンスターが、選ばれた人間を攻撃
-			M2.attack(H2);
+			monster.attack(human);
 			
 			// 人間のHPが0以下になれば、人間は倒れ、その人間を人間グループから削除
-			if(H2.getHp()<= 0) {
-				System.out.println("\n★ 「"+ H2.getName() +"」は倒れた。\n");
-				humans.remove(humans.indexOf(H2));
+			if(human.getHp()<= 0) {
+				System.out.println("\n★ 「"+ human.getName() +"」は倒れた。\n");
+				humans.remove(humans.indexOf(human));
 			}
 			
 			// 人間グループに誰もいなくなれば、人間グループの敗北
